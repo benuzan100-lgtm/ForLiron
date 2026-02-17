@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>My Girl</title>
+  <title>For My Girl</title>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -86,35 +86,15 @@
       transition: transform .12s ease, background .12s ease;
     }
 
-    #yesBtn {
-      left: 18%;
-      background: var(--yes);
-      color: #fff;
-    }
+    #yesBtn { left: 18%; background: var(--yes); color: #fff; }
     #yesBtn:hover { background: var(--yesHover); }
 
-    #noBtn {
-      left: 62%;
-      background: #e5e7eb;
-      color: #111827;
-    }
+    #noBtn { left: 62%; background: #e5e7eb; color: #111827; }
 
-    .hint {
-      margin-top: 10px;
-      font-size: 13px;
-      opacity: .7;
-    }
+    .hint { margin-top: 10px; font-size: 13px; opacity: .7; }
 
-    .result {
-      display: none;
-      margin-top: 18px;
-      animation: pop .35s ease;
-    }
-
-    .result h2 {
-      font-size: clamp(30px, 4.5vw, 46px);
-      margin: 10px 0;
-    }
+    .result { display: none; margin-top: 18px; animation: pop .35s ease; }
+    .result h2 { font-size: clamp(30px, 4.5vw, 46px); margin: 10px 0; }
 
     .fireworks {
       width: min(380px, 90vw);
@@ -133,46 +113,42 @@
   <canvas id="confettiCanvas"></canvas>
 
   <main class="card">
-    <!-- ANIMAL WITH HEART -->
-<a href="https://img.freepik.com/premium-photo/cute-anime-cartoon-dog-with-heart-balloon-illustration-isolated-background_776894-18156.jpg">
-  <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
-    ...
-  </svg>
-</a>
+    <!-- DOG WITH HEART -->
+    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
       <defs>
+        <!-- הכלב -->
         <linearGradient id="fur" x1="0" x2="1">
-          <stop offset="0" stop-color="#f7c7a1"/>
-          <stop offset="1" stop-color="#f2a97b"/>
+          <stop offset="0" stop-color="#cfa06f"/>
+          <stop offset="1" stop-color="#8b5a2b"/>
         </linearGradient>
+        <!-- לב גדול -->
         <linearGradient id="heart" x1="0" x2="1">
           <stop offset="0" stop-color="#ff4d7d"/>
           <stop offset="1" stop-color="#ff1f68"/>
         </linearGradient>
+        <!-- לב קטן -->
+        <linearGradient id="smallHeart" x1="0" x2="1">
+          <stop offset="0" stop-color="#ff7aa2"/>
+          <stop offset="1" stop-color="#ff3b7a"/>
+        </linearGradient>
       </defs>
 
-      <path d="M250 50 C250 33 270 25 282 38
-               C294 25 314 33 314 50
-               C314 78 282 92 282 106
-               C282 92 250 78 250 50Z"
-            fill="url(#heart)"/>
+      <!-- גוף הכלב -->
+      <path d="M80 130 C80 70 150 50 200 80 C250 50 300 90 300 140 C300 190 250 220 200 210 C150 220 80 190 80 130Z" fill="url(#fur)"/>
 
-      <path d="M90 120 C90 70 140 40 190 60
-               C240 40 290 70 290 120
-               C290 180 240 210 190 210
-               C140 210 90 180 90 120Z"
-            fill="url(#fur)"/>
+      <!-- אוזניים -->
+      <path d="M100 100 L90 60 L140 85 Z" fill="#b77f5a"/>
+      <path d="M260 100 L270 60 L220 85 Z" fill="#b77f5a"/>
 
-      <path d="M110 92 L95 55 L140 78 Z" fill="#f2a97b"/>
-      <path d="M270 92 L285 55 L240 78 Z" fill="#f2a97b"/>
+      <!-- עיניים -->
+      <circle cx="150" cy="140" r="8"/>
+      <circle cx="210" cy="140" r="8"/>
 
-      <circle cx="160" cy="130" r="8"/>
-      <circle cx="220" cy="130" r="8"/>
+      <!-- לב גדול מעל הכלב -->
+      <path d="M240 60 C240 45 260 35 272 48 C284 35 304 45 304 60 C304 88 272 102 272 116 C272 102 240 88 240 60Z" fill="url(#heart)"/>
 
-      <path d="M190 144 C186 144 182 148 182 152
-               C182 160 190 164 190 170
-               C190 164 198 160 198 152
-               C198 148 194 144 190 144Z"
-            fill="#ff7aa2"/>
+      <!-- לב קטן מעל הכלב -->
+      <path d="M200 40 C200 32 210 28 216 34 C222 28 232 32 232 40 C232 50 216 56 216 64 C216 56 200 50 200 40Z" fill="url(#smallHeart)"/>
     </svg>
 
     <h1>לירון נחום האם תסכימי להיות הדייט שלי ביום חמישי?</h1>
@@ -182,16 +158,11 @@
       <button id="noBtn">No</button>
     </section>
 
-    <!-- HINT -->
     <div class="hint" id="hint">“No” seems a bit shy 😈</div>
 
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
-      <img
-        class="fireworks"
-        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
-        alt="Fireworks"
-      />
+      <img class="fireworks" src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Fireworks" />
     </section>
   </main>
 
@@ -304,11 +275,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
